@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faizan Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button id="darkModeToggle" class="toggle-btn">🌙 Dark Mode</button>
+
+  <!-- Header -->
+  <header>
+    <img src="images/profile.jpg" alt="Profile" class="profile-pic">
+    <h1>Naat ki Duniya</h1>
+    <p>🎥 Photographer | 🎬 Videographer | 🔴 Live Streaming</p>
+  </header>
+
+  <!-- About Me -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>
+      I am Muhammad Faizan Memon— Aik passionate photographer, videographer aur live streamer.
+      Tasveerain lena sirf mera kaam nahi, yeh meri zindagi ka junoon hai...
+    </p>
+  </section>
+
+  <!-- Social Links -->
+  <div class="social-icons">
+    <a href="https://youtube.com/@officialnaatkidunya?si=..." target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+    </a>
+    <a href="https://www.instagram.com/official_naat_ki_dunya" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
+    </a>
+    <a href="https://www.facebook.com/share/16bGwEv5Hd/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384053.png" alt="Facebook">
+    </a>
+  </div>
+
+  <!-- Projects -->
+  <section class="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-box">
+      <img src="images/proj1a.jpg" alt="Jumma Mubarak 1">
+      <img src="images/proj1b.jpg" alt="Jumma Mubarak 2">
+      <h3>Jumma Mubarak</h3>
+      <p>Live | Haji Abdul Habib Attari Special Speech | Jumma Mubarak...</p>
+      <a href="https://www.youtube.com/live/d6DP8QRFBZo" target="_blank" class="btn">Watch Project</a>
+    </div>
+
+    <div class="project-box">
+      <img src="images/proj2a.jpg" alt="Mehfil e Naat 1">
+      <img src="images/proj2b.jpg" alt="Mehfil e Naat 2">
+      <h3>Mehfil e Naat</h3>
+      <p>Mehfil e Naat wa Sahaba e Ahle Bait | Qasidah | Meshup Kalam...</p>
+      <a href="https://youtu.be/sSKdg7mWhBo" target="_blank" class="btn">Watch Project</a>
+    </div>
+
+    <a href="images/cv.jpg" download class="cv-btn">Download CV</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-details">
+      <p><strong>Phone:</strong> 923134963901</p>
+      <p><strong>Email:</strong> naatkidunya901@gmail.com</p>
+    </div>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    const toggleBtn = document.getElementById('darkModeToggle');
+    toggleBtn.addEventListener('click', function () {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+
+</body>
+</html>
