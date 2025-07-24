@@ -1,163 +1,122 @@
+/* Reset default browser styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body styling */
 body {
-  font-family: 'Comic Neue', cursive;
-  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
   color: #333;
-  padding: 10px;
 }
 
-.toggle-btn {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  padding: 6px 10px;
-  background: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 1000;
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.dark-mode {
-  background-color: #222;
-  color: #fff;
-}
-
+/* Header */
 header {
+  background-color: #222;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin-top: 10px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  margin: 40px 0;
+}
+
+/* Section headings */
+h1, h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-h1, h2, h3 {
-  text-align: center;
-  margin: 10px 0;
-  font-size: 2rem;
-}
-
-.about p {
-  text-align: center;
-  max-width: 900px;
-  margin: 10px auto;
-  padding: 10px;
-  font-size: 18px;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin: 15px 0;
-}
-
-.social-icons img {
-  width: 40px;
-  height: 40px;
-}
-
+/* Project Cards */
 .projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-.project-box {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 15px;
-  margin: 20px auto;
-  max-width: 800px;
-}
-
-.project-box img {
+.project-card img {
   width: 100%;
-  max-width: 100%;
   height: auto;
-  border-radius: 10px;
-  margin: 5px 0;
+  border-radius: 5px;
 }
 
-.btn, .cv-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
+/* About section */
+.about {
+  background-color: #eee;
+  padding: 30px;
   border-radius: 8px;
 }
 
-.btn:hover, .cv-btn:hover {
-  background-color: #0056b3;
-}
-
-#contact {
-  text-align: center;
-  margin: 40px 0;
-}
-
-#contact input,
-#contact textarea {
-  width: 100%;
-  max-width: 400px;
-  margin: 10px auto;
-  padding: 10px;
-  border: 1px solid #ccc;
-  display: block;
-  font-size: 16px;
-  border-radius: 5px;
-}
-
-#contact button {
-  padding: 10px 20px;
-  margin-top: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #333;
+/* Footer */
+footer {
+  background-color: #222;
   color: white;
-  border: none;
-  border-radius: 5px;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
 }
 
-/* Responsive Styling */
+/* Responsive Text */
 @media (max-width: 768px) {
-  h1, h2, h3 {
-    font-size: 1.5rem;
+  h1 {
+    font-size: 24px;
   }
 
-  .about p {
-    font-size: 15px;
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
   }
+}
 
-  .social-icons img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .project-box {
-    padding: 10px;
-  }
-
-  .btn, .cv-btn {
-    width: 100%;
-  }
-
-  #contact input,
-  #contact textarea {
-    font-size: 14px;
-    padding: 8px;
-  }
+/* 🔧 Fix for images not showing on mobile */
+img {
+  display: block !important;
+  max-width: 100%;
+  height: auto;
 }
